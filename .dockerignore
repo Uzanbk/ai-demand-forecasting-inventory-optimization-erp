@@ -1,0 +1,54 @@
+# ============================================================
+#  .dockerignore — fichiers exclus de l'image Docker
+#  Réduit la taille de l'image et évite de copier l'inutile
+# ============================================================
+
+# Environnement virtuel Python (ne jamais embarquer dans l'image)
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers de développement (pas nécessaires au dashboard)
+nettoyage.py
+pretraitement.py
+featengin.py
+modelisation.py
+analyseData.py
+agent_llm_stocks.py
+check.py
+probmet.py
+script.py
+
+# Données brutes sources (le dashboard n'en a pas besoin)
+PurchaseOrder_cleaned.xlsx
+PurchaseReceipt_cleaned.xlsx
+SalesOrder_cleaned.xlsx
+StockItem_cleaned.xlsx
+acumatica_cleaned.xlsx
+acumatica_export.xlsx
+shipment_cleaned.xlsx
+data_quality_report.xlsx
+analyse_metier_stock_final.xlsx
+
+
+# Rapports (pas utiles dans le conteneur)
+*.pdf
+*.html
+
+# Git
+.git/
+.gitignore
+
+# Textes intermédiaires
+*.txt
+!requirements.txt
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
